@@ -16,3 +16,11 @@ def test_display_grid():
         
     assert grid_value == expected_grid_value
 
+
+def test_count_live_neighbours():
+# count_live_neighbours(grid,r,c)
+
+    assert game_of_life.count_live_neighbours([[0,1,0],
+                                    [0,0,0],
+                                    [0,0,0]], (0,2)) == 1
+
