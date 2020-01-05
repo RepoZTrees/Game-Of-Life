@@ -18,9 +18,16 @@ def test_display_grid():
 
 
 def test_count_live_neighbours():
-# count_live_neighbours(grid,r,c)
+# count_live_neighbours(grid,r,c). So (0,2 is row0, column2)
 
     assert game_of_life.count_live_neighbours([[0,1,0],
-                                    [0,0,0],
-                                    [0,0,0]], (0,2)) == 1
+                                               [0,1,0],
+                                               [0,1,0]], (0),(2)) == 2
 
+    assert game_of_life.count_live_neighbours([[0,1,1],
+                                               [0,1,0],
+                                               [0,1,1]], (1),(2)) == 5
+
+    assert game_of_life.count_live_neighbours([[0,1],
+                                               [0,1,0]], (0),(0)) == 2
+                                                                                                           
