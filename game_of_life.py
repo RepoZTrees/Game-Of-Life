@@ -18,8 +18,9 @@ def display_grid(grid):
 #print(display_grid())
 
 #--------
-grid = [[0,1,0],
-        [0,1,0],
+
+grid = [[0,0,0],
+        [0,0,0],
         [0,1,0]]
 
 def count_live_neighbours(grid, r, c):
@@ -35,6 +36,24 @@ def count_live_neighbours(grid, r, c):
 
     return sum(map(bool, neighbors_list))
 
-#a = count_live_neighbours(grid,0,1)
+#a = count_live_neighbours(grid,1,1)
 #print(a)
 
+#------
+
+def dead_or_alive(grid,r,c):
+    neighbours_count = count_live_neighbours(grid,r,c)
+
+    if grid[r][c] == 1:
+        if neighbours_count < 2 or neighbours_count > 3:
+            return 0
+        else:
+            return 1
+    else:
+        if neighbours_count == 3:
+            return 1
+        else:
+            return 0
+
+#b = dead_or_alive(grid,2,1)
+#print(b)
