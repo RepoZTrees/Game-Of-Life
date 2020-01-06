@@ -75,3 +75,11 @@ def test_dead_cell_more_than_three_neighbours_remains_dead():
                                        [1,1,0]],(1),(0)) == 0
 
 
+
+def test_next_generation_grid_values():
+    assert game_of_life.next_generation_grid([[0,1,0],
+                                              [0,1,0],
+                                              [0,1,0]]) == ([[0,0,0],
+                                                             [1,1,1],
+                                                             [0,0,0]])
+
