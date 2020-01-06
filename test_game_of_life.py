@@ -31,22 +31,16 @@ def test_count_live_neighbours():
     assert game_of_life.count_live_neighbours([[0,1],
                                                [0,1,0]], (0),(0)) == 2
                                                                                                            
-
 def test_live_cell_no_neighbours_dies():
     assert game_of_life.dead_or_alive([[0,0,0],
                                        [0,0,0],
                                        [0,1,0]], (2),(1)) == 0
-
-
-"""
-#select all, alt ;
 
 def test_live_cell_one_neighbours_dies():
     assert game_of_life.dead_or_alive([[1,1,0],
                                        [0,0,0],
                                        [0,1,0]], (0),(0)) == 0
 
-    
 def test_live_cell_two_neighbours_live():
     assert game_of_life.dead_or_alive([[1,1,0],
                                        [0,1,0],
@@ -62,7 +56,6 @@ def test_live_cell_more_than_three_neighbours_dies():
     assert game_of_life.dead_or_alive([[1,1,0],
                                        [1,1,0],
                                        [0,1,0]],(1),(1)) == 0
-
 
 def test_dead_cell_two_neighbours_remains_dead():
     assert game_of_life.dead_or_alive([[0,1,0],
@@ -81,5 +74,4 @@ def test_dead_cell_more_than_three_neighbours_remains_dead():
                                        [0,1,0],
                                        [1,1,0]],(1),(0)) == 0
 
-"""
 
