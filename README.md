@@ -6,7 +6,7 @@ Built using Python 3.5, this implementation of Conway's Game of Life allows the 
 
 This project is licensed under the terms of the MIT license.
 
-**Ruleset**
+# Ruleset
 
 Using the following ruleset the 2D grid of cells will evolve from generation to generation until it reaches a static state of either all dead cells or a mix of still, oscillating, or moving (spaceship) cells.
 
